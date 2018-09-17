@@ -1,0 +1,88 @@
+
+<article class="app">
+ <header> <div class="titu3">Recuerda que ambos campos son requeridos <i class="far fa-lightbulb"></i></div></header>
+  <main class="gatito">
+  
+
+   <form (ngSubmit)="calificar()" #forma="ngForm" novalidate="" >
+     <h1 class="titu1">Califícanos <span class="ast">*</span></h1>
+   <p class="clasificacion">
+     <input [(ngModel)]="satis.valoracion"
+        id="radio1" type="radio" name="estrellas" value="5" required>
+        <label for="radio1"><i class="fas fa-star fa-lg"></i></label>
+        <input  [(ngModel)]="satis.valoracion"
+        id="radio2" type="radio" name="estrellas" value="4" required>
+        <label for="radio2"><i class="fas fa-star fa-lg"></i></label>
+        <input [(ngModel)]="satis.valoracion"
+        id="radio3" type="radio" name="estrellas" value="3" required>
+        <label for="radio3"><i class="fas fa-star fa-lg"></i></label>
+        <input [(ngModel)]="satis.valoracion"
+        id="radio4" type="radio" name="estrellas" value="2" required>
+        <label for="radio4"><i class="fas fa-star fa-lg"></i></label>
+        <input [(ngModel)]="satis.valoracion"
+        id="radio5" type="radio" name="estrellas" value="1" required>
+        <label for="radio5"><i class="fas fa-star fa-lg"></i></label>
+   </p>
+    <h1 class="titu2">Envíanos tu sugerencia <span class="ast">*</span></h1> 
+    <textarea   #comentario="ngModel"
+   [(ngModel)]="satis.comentario"
+   class="sug"
+   name="comentario"
+    required>
+   </textarea>
+ <div class="contboton">
+   <button [disabled]="!forma.valid" class="cajbtn"
+   type="submit"
+   [ngClass]="{botsug: forma.valid, 'dis': '!forma.valid'}">
+   Enviar</button>
+ </div>
+ </form>
+ </main>
+ <footer></footer>
+</article>
+
+
+
+<!-- 
+<div class="centrado">
+<div class="titu3">Recuerda que ambos campos son requeridos <i class="far fa-lightbulb"></i></div>
+<div class="cont">
+<form (ngSubmit)="calificar()" #forma="ngForm" novalidate="" >
+    <h1 class="titu1">Califícanos <span class="ast">*</span></h1>
+  <p class="clasificacion">
+    <input [(ngModel)]="satis.valoracion"
+       id="radio1" type="radio" name="estrellas" value="5" required>
+       <label for="radio1"><i class="fas fa-star fa-lg"></i></label>
+       <input  [(ngModel)]="satis.valoracion"
+       id="radio2" type="radio" name="estrellas" value="4" required>
+       <label for="radio2"><i class="fas fa-star fa-lg"></i></label>
+       <input [(ngModel)]="satis.valoracion" 
+       id="radio3" type="radio" name="estrellas" value="3" required>
+       <label for="radio3"><i class="fas fa-star fa-lg"></i></label>
+       <input [(ngModel)]="satis.valoracion"
+       id="radio4" type="radio" name="estrellas" value="2" required>
+       <label for="radio4"><i class="fas fa-star fa-lg"></i></label>
+       <input [(ngModel)]="satis.valoracion"
+       id="radio5" type="radio" name="estrellas" value="1" required>
+       <label for="radio5"><i class="fas fa-star fa-lg"></i></label>
+  </p>
+
+  <h1 class="titu2">Envíanos tu sugerencia <span class="ast">*</span></h1>  
+
+  <textarea   #comentario="ngModel"
+  [(ngModel)]="satis.comentario" 
+  class="sug" 
+  name="comentario"
+   required>
+  </textarea>
+
+  <button [disabled]="!forma.valid"
+  type="submit"
+  [ngClass]="{botsug: forma.valid, 'dis': '!forma.valid'}">
+  Enviar</button>
+</form>
+
+</div>
+</div> -->
+<!-- class="botsug" -->
+<!-- [ngClass]="{botsug: forma.valid, 'dis': '!forma.valid'}" -->

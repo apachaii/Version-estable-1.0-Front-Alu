@@ -1,0 +1,41 @@
+.blanco{
+    color: white !important;
+    font-size: 130% !important;
+    
+}
+
+img{
+    /* margin-top: 7%; */
+    /* margin-left: 48%; */
+    width: 10%;
+    height: 30%;
+}
+
+#menu{
+    /* background-color:; */
+    
+    width: auto;
+    float: right;
+    margin-top: 10px;
+    
+}
+#menu ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#menu ul li{
+    display: inline-block;
+}
+#menu ul li a{
+    color: white;
+    display: block;
+    padding: 15px 30px;
+    text-decoration: none;
+}
+#menu ul li a:hover{
+    background-color: rgb(165, 9, 9);
+}
+.item-r{
+    float: right;
+}

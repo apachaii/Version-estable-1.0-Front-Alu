@@ -1,0 +1,61 @@
+<!--<div class="potato2"> 
+  <div class="container gg">
+<h1 class="titulo">Habla con ADA</h1>
+</div>
+
+<div #scrollMe class="cajita">
+<ng-container *ngFor="let message of messages | async">
+  <div class="message" [ngClass]="{ 'from': message.sentBy === 'bot',
+                                    'to':   message.sentBy === 'user' }">
+    {{ message.content }}
+  </div>
+</ng-container>
+
+</div>
+
+<div class="cajita2">
+  <form #forma="ngForm">
+<input class=" msj"  name="formulario" required
+[(ngModel)]="formValue" (keyup.enter)="sendMessage()" type="text">
+<button [disabled]="!forma.valid"
+ class="button btn btn-secondary btn-sm " (click)="sendMessage()">Enviar</button>
+ <button class="button btn btn-danger btn-sm" (click)="Activar(true)">
+  <i class="fas fa-microphone"></i>
+</button> 
+  </form>
+</div>
+
+</div> -->
+
+<div class="potato2"> 
+    <div class="container gg">
+
+  </div>
+  <div class="chatbox">
+  <div #scrollMe class="chatlogs">
+  <ng-container *ngFor="let message of messages | async">
+    <div  *ngIf="message.content != 'unka38'" class="message" [ngClass]="{ 'from': message.sentBy === 'bot',
+                                      'to':   message.sentBy === 'user' }">
+      <p *ngIf="message.content != 'unka38'" class="chat-message">{{ message.content }}
+    </div>
+  </ng-container>
+  
+  </div>
+  <hr class="linea">
+  <div class="chat-form">
+    <form #forma="ngForm" >
+  <textarea  name="formulario" required
+  [(ngModel)]="formValue" (keyup.enter)="sendMessage()" type="text"> </textarea>
+  
+    </form>
+    <button [disabled]="!forma.valid"
+   (click)="sendMessage()">Enviar</button>
+   <!-- <button  (click)="Activar(true)">
+    <i class="fas fa-microphone"></i>
+  </button>  -->
+  </div>
+</div>
+  
+  </div>
+
+
