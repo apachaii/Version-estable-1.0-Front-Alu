@@ -7,7 +7,7 @@ import 'rxjs/add/operator/scan';
 import { empty } from 'rxjs/Observer';
 import { concat } from 'rxjs/operators/concat';
 
-import {SimpleCrypt} from "ngx-simple-crypt";
+
 
 @Component({
   selector: 'app-chat',
@@ -76,17 +76,17 @@ export class ChatComponent implements OnInit {
     } catch(err) { }                 
 }
 
-  Activar(conf:boolean){
-    console.log(conf);
-    if(conf){
-     this.speech.callar();
-     conf = false;
-    }
-    if(!conf)
-    {
-     this.speech.record('es_MX')
-     .subscribe(e => this.formValue = e)
-    }
+  // Activar(conf:boolean){
+  //   console.log(conf);
+  //   if(conf){
+  //    this.speech.callar();
+  //    conf = false;
+  //   }
+  //   if(!conf)
+  //   {
+  //    this.speech.record('es_MX')
+  //    .subscribe(e => this.formValue = e)
+  //   }
      
-  }
+  // }
 }

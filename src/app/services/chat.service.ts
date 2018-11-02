@@ -5,7 +5,7 @@ import { Observable } from 'rxjs/Observable';
 import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { Alumno } from '../Interface/alumno.interface';
 import {HttpClient,HttpHeaders} from '@angular/common/http';
-import {SimpleCrypt} from "ngx-simple-crypt";
+
 // Message class for displaying messages in the component
 
 export class Message {
